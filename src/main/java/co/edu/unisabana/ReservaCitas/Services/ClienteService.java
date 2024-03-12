@@ -1,11 +1,13 @@
 package co.edu.unisabana.ReservaCitas.Services;
 
+import co.edu.unisabana.ReservaCitas.DTO.ClienteDTO;
 import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
 import co.edu.unisabana.ReservaCitas.Repositorios.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ClienteService {
@@ -14,10 +16,6 @@ public class ClienteService {
     @Autowired
     public ClienteService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
-    }
-
-    public List<Cliente> getAllClientes() {
-        return clienteRepository.findAll();
     }
 
     public Cliente getClienteById(Long clienteId) {
@@ -32,4 +30,5 @@ public class ClienteService {
     public void eliminarCliente(Long clienteId) {
         clienteRepository.deleteById(clienteId);
     }
+
 }

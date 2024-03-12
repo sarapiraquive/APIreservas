@@ -15,6 +15,9 @@ public class Estilista {
     private String nombre;
 
     @Column(nullable = false)
+    private String nacionalidad;
+
+    @Column(nullable = false)
     private String especialidad;
 
     @OneToMany(mappedBy = "estilista", cascade = CascadeType.ALL)
