@@ -26,7 +26,6 @@ public class CitaService {
     }
 
     public Cita crearCita(Cita cita) {
-        // Aquí puedes realizar cualquier validación necesaria antes de guardar la cita
         return citaRepository.save(cita);
     }
 
