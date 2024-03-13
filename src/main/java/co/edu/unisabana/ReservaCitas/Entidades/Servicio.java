@@ -2,11 +2,13 @@ package co.edu.unisabana.ReservaCitas.Entidades;
 
 import co.edu.unisabana.ReservaCitas.Entidades.Cita;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
 @Table(name = "servicios")
+@Data
 public class Servicio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

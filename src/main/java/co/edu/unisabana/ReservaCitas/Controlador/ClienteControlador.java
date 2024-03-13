@@ -25,6 +25,6 @@ public class ClienteControlador {
     @GetMapping
     public List<Cliente> getAllClientes()
     {
-        return ClienteService.getAll();
+        return clienteService.getAllCliente();
     }
 }

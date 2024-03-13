@@ -1,11 +1,13 @@
 package co.edu.unisabana.ReservaCitas.Entidades;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
 @Table(name = "estilistas")
+@Data
 public class Estilista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

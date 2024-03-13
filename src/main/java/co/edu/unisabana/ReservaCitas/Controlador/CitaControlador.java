@@ -23,6 +23,6 @@ public class CitaControlador {
     @GetMapping
     public List<Cita> getAllCitas()
     {
-        return CitaService.getAllCitas();
+        return citaService.getAllCitas();
     }
 }
