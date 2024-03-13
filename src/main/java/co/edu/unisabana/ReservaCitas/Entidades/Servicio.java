@@ -26,6 +26,5 @@ public class Servicio {
     @Column(nullable = false)
     private double precio;
 
-    @OneToMany(mappedBy = "servicio", cascade = CascadeType.ALL)
-    private List<Cita> citas;
+
 }

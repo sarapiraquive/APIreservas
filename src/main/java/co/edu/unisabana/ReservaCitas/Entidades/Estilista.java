@@ -22,6 +22,5 @@ public class Estilista {
     @Column(nullable = false)
     private String especialidad;
 
-    @OneToMany(mappedBy = "estilista", cascade = CascadeType.ALL)
-    private List<Cita> citas;
+
 }

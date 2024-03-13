@@ -1,7 +1,6 @@
 package co.edu.unisabana.ReservaCitas.Controlador;
 
 import co.edu.unisabana.ReservaCitas.Entidades.Cita;
-import co.edu.unisabana.ReservaCitas.Repositorios.CitaRepository;
 import co.edu.unisabana.ReservaCitas.Services.CitaService;
 import lombok.Data;
 import org.springframework.web.bind.annotation.GetMapping;

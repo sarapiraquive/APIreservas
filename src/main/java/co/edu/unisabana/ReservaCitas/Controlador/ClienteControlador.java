@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 @Data
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping("/clientes")
 public class ClienteControlador {
 
     private final ClienteService clienteService;

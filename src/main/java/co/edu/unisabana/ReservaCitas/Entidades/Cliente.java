@@ -21,8 +21,7 @@ public class Cliente {
     private String correoElectronico;
 
     @Column(nullable = false)
-    private String telefono;
+    private int telefono;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Cita> citas;
+
 }
