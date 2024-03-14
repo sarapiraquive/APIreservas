@@ -1,11 +1,13 @@
 package co.edu.unisabana.ReservaCitas.Entidades;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
 @Table(name = "estilistas")
+@Data
 public class Estilista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,8 +17,10 @@ public class Estilista {
     private String nombre;
 
     @Column(nullable = false)
+    private String nacionalidad;
+
+    @Column(nullable = false)
     private String especialidad;
 
-    @OneToMany(mappedBy = "estilista", cascade = CascadeType.ALL)
-    private List<Cita> citas;
+
 }

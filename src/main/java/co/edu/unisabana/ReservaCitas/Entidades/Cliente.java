@@ -1,11 +1,14 @@
 package co.edu.unisabana.ReservaCitas.Entidades;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 
 import java.util.List;
 
 @Entity
 @Table(name = "clientes")
+@Data
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +21,7 @@ public class Cliente {
     private String correoElectronico;
 
     @Column(nullable = false)
-    private String telefono;
+    private int telefono;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Cita> citas;
+
 }

@@ -1,14 +1,17 @@
 package co.edu.unisabana.ReservaCitas.Entidades;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "citas")
+@Data
 public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Long id;
 
     @ManyToOne
