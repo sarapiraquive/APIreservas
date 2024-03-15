@@ -11,7 +11,6 @@ import java.util.List;
 public class CitaService {
     private final CitaRepository citaRepository;
 
-    @Autowired
     public CitaService(CitaRepository citaRepository) {
         this.citaRepository = citaRepository;
     }
