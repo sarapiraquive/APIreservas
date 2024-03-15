@@ -34,10 +34,9 @@ public class CitaService {
         citaRepository.deleteById(citaId);
     }
 
-    public Cita actualizarFechaCita(Long citaId, LocalDateTime nuevaFecha){
-        Cita cita= citaRepository.findById(citaId).orElseThrow(() -> new EntityNotFoundException("Cita no encontrada"));
+    public Cita actualizarFechaCita(Long citaId, LocalDateTime nuevaFecha) {
+        Cita cita = citaRepository.findById(citaId).orElseThrow(() -> new EntityNotFoundException("Cita no encontrada"));
         cita.setFechaHora(nuevaFecha);
         return citaRepository.save(cita);
-    }
     }
 }
