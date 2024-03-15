@@ -2,9 +2,11 @@ package co.edu.unisabana.ReservaCitas.Services;
 
 import co.edu.unisabana.ReservaCitas.Entidades.Cita;
 import co.edu.unisabana.ReservaCitas.Repositorios.CitaRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -30,5 +32,12 @@ public class CitaService {
 
     public void eliminarCita(Long citaId) {
         citaRepository.deleteById(citaId);
+    }
+
+    public Cita actualizarFechaCita(Long citaId, LocalDateTime nuevaFecha){
+        Cita cita= citaRepository.findById(citaId).orElseThrow(() -> new EntityNotFoundException("Cita no encontrada"));
+        cita.setFechaHora(nuevaFecha);
+        return citaRepository.save(cita);
+    }
     }
 }
