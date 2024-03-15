@@ -11,7 +11,6 @@ import java.util.List;
 public class EstilistaService {
     private final EstilistaRepository estilistaRepository;
 
-    @Autowired
     public EstilistaService(EstilistaRepository estilistaRepository) {
         this.estilistaRepository = estilistaRepository;
     }

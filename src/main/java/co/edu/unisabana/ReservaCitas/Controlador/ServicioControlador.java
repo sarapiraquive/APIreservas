@@ -1,13 +1,14 @@
 package co.edu.unisabana.ReservaCitas.Controlador;
 
 
+import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
 import co.edu.unisabana.ReservaCitas.Entidades.Servicio;
 import co.edu.unisabana.ReservaCitas.Services.ServicioService;
 
 import lombok.Data;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +27,10 @@ public class ServicioControlador {
     public List<Servicio> getAllServicios()
     {
         return servicioService.getAllServicios();
+    }
+    @PostMapping("/crear")
+    public ResponseEntity<Servicio> crearServicio(@RequestBody Servicio servicio) {
+        Servicio servicioCreado = servicioService.crearServicio(servicio);
+        return new ResponseEntity<>(servicioCreado, HttpStatus.CREATED);
     }
 }

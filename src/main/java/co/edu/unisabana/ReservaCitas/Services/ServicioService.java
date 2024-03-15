@@ -12,7 +12,6 @@ import java.util.List;
 public class ServicioService {
     private final ServicioRepository servicioRepository;
 
-    @Autowired
     public ServicioService(ServicioRepository servicioRepository) {
         this.servicioRepository = servicioRepository;
     }

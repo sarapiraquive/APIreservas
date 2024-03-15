@@ -11,7 +11,6 @@ import java.util.List;
 public class ClienteService {
     private final ClienteRepository clienteRepository;
 
-    @Autowired
     public ClienteService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
@@ -32,5 +31,7 @@ public class ClienteService {
     public void eliminarCliente(Long clienteId) {
         clienteRepository.deleteById(clienteId);
     }
-
+    public List<Cliente> getAllCliente() {
+        return clienteRepository.findAll();
+    }
 }

@@ -1,13 +1,14 @@
 package co.edu.unisabana.ReservaCitas.Controlador;
 
 import co.edu.unisabana.ReservaCitas.Entidades.Cita;
+import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
 import co.edu.unisabana.ReservaCitas.Entidades.Estilista;
 import co.edu.unisabana.ReservaCitas.Services.CitaService;
 import co.edu.unisabana.ReservaCitas.Services.EstilistaService;
 import lombok.Data;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +27,10 @@ public class EstilistaControlador {
     public List<Estilista> getAllEstilistas()
     {
         return estilistaService.getAllEstilistas();
+    }
+    @PostMapping("/crear")
+    public ResponseEntity<Estilista> crearEstilista(@RequestBody Estilista estilista) {
+        Estilista estilistaCreado = estilistaService.crearEstilista(estilista);
+        return new ResponseEntity<>(estilistaCreado, HttpStatus.CREATED);
     }
 }
