@@ -1,7 +1,6 @@
 package co.edu.unisabana.ReservaCitas.Services;
 
 import co.edu.unisabana.ReservaCitas.DTO.ClienteDTO;
-import co.edu.unisabana.ReservaCitas.Entidades.Cita;
 import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
 import co.edu.unisabana.ReservaCitas.Repositorios.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +13,10 @@ import java.util.stream.Collectors;
 public class ClienteService {
     private final ClienteRepository clienteRepository;
 
-
+    @Autowired
     public ClienteService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
-
-    public List<Cliente> getAllCliente() {
-        return clienteRepository.findAll();
-    }
-
 
     public Cliente getClienteById(Long clienteId) {
         return clienteRepository.findById(clienteId)
