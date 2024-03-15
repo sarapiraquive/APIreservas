@@ -1,11 +1,12 @@
 package co.edu.unisabana.ReservaCitas.Controlador;
 
 import co.edu.unisabana.ReservaCitas.Entidades.Cita;
+import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
 import co.edu.unisabana.ReservaCitas.Services.CitaService;
 import lombok.Data;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @Data
@@ -23,5 +24,10 @@ public class CitaControlador {
     public List<Cita> getAllCitas()
     {
         return citaService.getAllCitas();
+    }
+    @PostMapping("/crear")
+    public ResponseEntity<Cita> crearCita(@RequestBody Cita cita) {
+        Cita citaCreada = citaService.crearCita(cita);
+        return new ResponseEntity<>(citaCreada, HttpStatus.CREATED);
     }
 }
