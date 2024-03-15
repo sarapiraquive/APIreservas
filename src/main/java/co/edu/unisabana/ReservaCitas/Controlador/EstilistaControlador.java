@@ -33,4 +33,9 @@ public class EstilistaControlador {
         Estilista estilistaCreado = estilistaService.crearEstilista(estilista);
         return new ResponseEntity<>(estilistaCreado, HttpStatus.CREATED);
     }
+    @DeleteMapping("/eliminar/{estilistaId}")
+    public ResponseEntity<Void> eliminarEstilista(@PathVariable Long estilistaId) {
+        estilistaService.eliminarEstilista(estilistaId);
+        return ResponseEntity.noContent().build();
+    }
 }
