@@ -31,7 +31,5 @@ public class ClienteService {
     public void eliminarCliente(Long clienteId) {
         clienteRepository.deleteById(clienteId);
     }
-    public List<Cliente> getAllCliente() {
-        return clienteRepository.findAll();
-    }
+
 }
