@@ -1,5 +1,6 @@
 package co.edu.unisabana.ReservaCitas.Controlador;
 
+import co.edu.unisabana.ReservaCitas.DTO.CambioFechaCitaDto;
 import co.edu.unisabana.ReservaCitas.Entidades.Cita;
 import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
 import co.edu.unisabana.ReservaCitas.Services.CitaService;
@@ -30,9 +31,16 @@ public class CitaControlador {
         Cita citaCreada = citaService.crearCita(cita);
         return new ResponseEntity<>(citaCreada, HttpStatus.CREATED);
     }
+
+    @PutMapping("/{id}/cambiarFecha")
+    public ResponseEntity<Cita> cambiarFechaCita(@PathVariable Long id, @RequestBody CambioFechaCitaDto cambioFechaDto) {
+        Cita citaActualizada = citaService.actualizarFechaCita(id, cambioFechaDto.getNuevaFecha());
+        return ResponseEntity.ok(citaActualizada);
+      
     @DeleteMapping("/eliminar/{citaId}")
     public ResponseEntity<Void> eliminarCita(@PathVariable Long citaId) {
         citaService.eliminarCita(citaId);
         return ResponseEntity.noContent().build();
+
     }
 }
