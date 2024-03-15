@@ -34,4 +34,10 @@ public class ClienteControlador {
         Cliente clienteCreado = clienteService.crearCliente(cliente);
         return new ResponseEntity<>(clienteCreado, HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/eliminar/{clienteId}")
+    public ResponseEntity<Void> eliminarCliente(@PathVariable Long clienteId) {
+        clienteService.eliminarCliente(clienteId);
+        return ResponseEntity.noContent().build();
+    }
 }
