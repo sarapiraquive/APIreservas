@@ -11,7 +11,7 @@ import java.util.List;
 public class Estilista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idEstilista;
 
     @Column(nullable = false)
     private String nombre;

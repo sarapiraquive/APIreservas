@@ -12,7 +12,7 @@ public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private Long id;
+    private Integer idCita;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false)
