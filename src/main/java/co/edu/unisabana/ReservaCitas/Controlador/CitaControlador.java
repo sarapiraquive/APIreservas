@@ -30,4 +30,9 @@ public class CitaControlador {
         Cita citaCreada = citaService.crearCita(cita);
         return new ResponseEntity<>(citaCreada, HttpStatus.CREATED);
     }
+    @DeleteMapping("/eliminar/{citaId}")
+    public ResponseEntity<Void> eliminarCita(@PathVariable Long citaId) {
+        citaService.eliminarCita(citaId);
+        return ResponseEntity.noContent().build();
+    }
 }

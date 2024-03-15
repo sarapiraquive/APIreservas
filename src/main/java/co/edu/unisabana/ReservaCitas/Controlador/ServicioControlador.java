@@ -33,4 +33,9 @@ public class ServicioControlador {
         Servicio servicioCreado = servicioService.crearServicio(servicio);
         return new ResponseEntity<>(servicioCreado, HttpStatus.CREATED);
     }
+    @DeleteMapping("/eliminar/{servicioId}")
+    public ResponseEntity<Void> eliminarServicio(@PathVariable Long servicioId) {
+        servicioService.eliminarServicio(servicioId);
+        return ResponseEntity.noContent().build();
+    }
 }
