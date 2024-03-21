@@ -1,14 +1,12 @@
-package co.edu.unisabana.ReservaCitas.Controlador;
+package co.edu.unisabana.ReservaCitas.controlador;
 
 
-import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
-import co.edu.unisabana.ReservaCitas.Entidades.Servicio;
-import co.edu.unisabana.ReservaCitas.Services.ServicioService;
+
+import co.edu.unisabana.ReservaCitas.entidades.Servicio;
+import co.edu.unisabana.ReservaCitas.services.ServicioService;
 
 import lombok.Data;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
 

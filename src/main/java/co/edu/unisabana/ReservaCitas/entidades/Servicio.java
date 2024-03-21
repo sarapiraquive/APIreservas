@@ -1,10 +1,7 @@
-package co.edu.unisabana.ReservaCitas.Entidades;
+package co.edu.unisabana.ReservaCitas.entidades;
 
-import co.edu.unisabana.ReservaCitas.Entidades.Cita;
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.util.List;
 
 @Entity
 @Table(name = "servicios")

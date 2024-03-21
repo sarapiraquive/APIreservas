@@ -1,10 +1,7 @@
-package co.edu.unisabana.ReservaCitas.Entidades;
+package co.edu.unisabana.ReservaCitas.entidades;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
-
-import java.util.List;
 
 @Entity
 @Table(name = "clientes")
@@ -13,7 +10,7 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCliente;
-
+    
     @Column(nullable = false)
     private String nombre;
 

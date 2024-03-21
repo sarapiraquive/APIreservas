@@ -1,9 +1,8 @@
-package co.edu.unisabana.ReservaCitas.Services;
+package co.edu.unisabana.ReservaCitas.services;
 
-import co.edu.unisabana.ReservaCitas.Entidades.Cita;
-import co.edu.unisabana.ReservaCitas.Repositorios.CitaRepository;
+import co.edu.unisabana.ReservaCitas.entidades.Cita;
+import co.edu.unisabana.ReservaCitas.repositorios.CitaRepository;
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

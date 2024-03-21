@@ -1,6 +1,6 @@
-package co.edu.unisabana.ReservaCitas.Repositorios;
+package co.edu.unisabana.ReservaCitas.repositorios;
 
-import co.edu.unisabana.ReservaCitas.Entidades.Cliente;
+import co.edu.unisabana.ReservaCitas.entidades.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

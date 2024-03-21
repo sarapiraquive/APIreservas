@@ -1,9 +1,8 @@
-package co.edu.unisabana.ReservaCitas.Services;
+package co.edu.unisabana.ReservaCitas.services;
 
 
-import co.edu.unisabana.ReservaCitas.Entidades.Servicio;
-import co.edu.unisabana.ReservaCitas.Repositorios.ServicioRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import co.edu.unisabana.ReservaCitas.entidades.Servicio;
+import co.edu.unisabana.ReservaCitas.repositorios.ServicioRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package co.edu.unisabana.ReservaCitas.Entidades;
+package co.edu.unisabana.ReservaCitas.entidades;
 
 import jakarta.persistence.*;
 import lombok.Data;
