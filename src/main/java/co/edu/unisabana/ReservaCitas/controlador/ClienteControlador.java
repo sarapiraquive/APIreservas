@@ -25,13 +25,13 @@ public class ClienteControlador {
         return clienteService.getAllCliente();
     }
 
-    @PostMapping("/crear")
+    @PostMapping
     public ResponseEntity<Cliente> crearCliente(@RequestBody Cliente cliente) {
         Cliente clienteCreado = clienteService.crearCliente(cliente);
         return new ResponseEntity<>(clienteCreado, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/eliminar/{clienteId}")
+    @DeleteMapping("/{clienteId}")
     public ResponseEntity<Void> eliminarCliente(@PathVariable Long clienteId) {
         clienteService.eliminarCliente(clienteId);
         return ResponseEntity.noContent().build();
