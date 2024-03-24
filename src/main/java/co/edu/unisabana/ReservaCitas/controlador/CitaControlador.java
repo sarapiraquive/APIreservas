@@ -3,6 +3,8 @@ package co.edu.unisabana.ReservaCitas.controlador;
 import co.edu.unisabana.ReservaCitas.dto.CambioFechaCitaDto;
 import co.edu.unisabana.ReservaCitas.entidades.Cita;
 import co.edu.unisabana.ReservaCitas.services.CitaService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import java.util.List;
 @Data
 @RestController
 @RequestMapping("/citas")
+@Api(tags = "Citas", description = "Operaciones de citas")
 public class CitaControlador {
 
     private final CitaService citaService;
@@ -21,11 +24,14 @@ public class CitaControlador {
         this.citaService = citaService;
     }
 
+    @ApiOperation("Obtener todas las citas")
     @GetMapping
     public List<Cita> getAllCitas()
     {
         return citaService.getAllCitas();
     }
+
+    @ApiOperation("Crear nueva cita")
     @PostMapping("/crear")
     public ResponseEntity<Cita> crearCita(@RequestBody Cita cita) {
         Cita citaCreada = citaService.crearCita(cita);
