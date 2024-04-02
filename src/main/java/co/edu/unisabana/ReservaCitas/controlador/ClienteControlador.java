@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/clientes")
 @Api(tags = "Clientes", description = "Operaciones de clientes")
-public class ClienteControlador
+public class ClienteControlador {
 
     private final ClienteService clienteService;
 
@@ -29,7 +29,7 @@ public class ClienteControlador
         return clienteService.getAllCliente();
     }
 
-    @ApiOperation("Crear nuevo cliente")
+    @ApiOperation("crear nuevo cliente")
     @PostMapping
     public ResponseEntity<Cliente> crearCliente(@RequestBody Cliente cliente) {
         Cliente clienteCreado = clienteService.crearCliente(cliente);
