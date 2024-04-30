@@ -6,4 +6,4 @@ WORKDIR /app
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "gestioninventarios.jar"]
+CMD ["java", "-jar", "reservaCita.jar"]
