@@ -1,7 +1,7 @@
 name: Continuos Delivery
 on:
   push:
-    branches: ['master']
+    branches: ['main']
 jobs:
   cd:
     runs-on: ubuntu-latest
