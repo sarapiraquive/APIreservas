@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Data
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/estilistas")
 @Api(tags = "Estilista", description = "Operaciones de estilista")
@@ -29,13 +30,17 @@ public class EstilistaControlador {
         return estilistaService.getAllEstilistas();
     }
 
+
+ 
+
     @ApiOperation("Crear nuevo estilista")
-    @PostMapping("/crear")
+    @PostMapping
+
     public ResponseEntity<Estilista> crearEstilista(@RequestBody Estilista estilista) {
         Estilista estilistaCreado = estilistaService.crearEstilista(estilista);
         return new ResponseEntity<>(estilistaCreado, HttpStatus.CREATED);
     }
-    @DeleteMapping("/eliminar/{estilistaId}")
+    @DeleteMapping("/{estilistaId}")
     public ResponseEntity<Void> eliminarEstilista(@PathVariable Long estilistaId) {
         estilistaService.eliminarEstilista(estilistaId);
         return ResponseEntity.noContent().build();

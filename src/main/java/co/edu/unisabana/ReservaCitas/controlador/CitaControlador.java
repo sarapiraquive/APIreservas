@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @Data
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/citas")
 @Api(tags = "Citas", description = "Operaciones de citas")
@@ -32,7 +33,7 @@ public class CitaControlador {
     }
 
     @ApiOperation("Crear nueva cita")
-    @PostMapping("/crear")
+    @PostMapping
     public ResponseEntity<Cita> crearCita(@RequestBody Cita cita) {
         Cita citaCreada = citaService.crearCita(cita);
         return new ResponseEntity<>(citaCreada, HttpStatus.CREATED);
