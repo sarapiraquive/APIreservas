@@ -29,7 +29,7 @@ public class EstilistaControlador {
         return estilistaService.getAllEstilistas();
     }
 
-    @ApiOperation("Crear nuevo cliente")
+    @ApiOperation("Crear nuevo estilista")
     @PostMapping("/crear")
     public ResponseEntity<Estilista> crearEstilista(@RequestBody Estilista estilista) {
         Estilista estilistaCreado = estilistaService.crearEstilista(estilista);

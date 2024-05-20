@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "7df4c478-1e95-476d-8df7-388a1641fd10",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27079729"
+	},
+	"item": [
+		{
+			"name": "Crear Clientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"nombre\": \"Sara\",\n    \"correoElectronico\": \"Sara@example.com\",\n    \"telefono\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Estilistas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nombre\": \"Juan\",\n    \"nacionalidad\": \"Venezuela\",\n    \"especialidad\": \"barbero\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/estilistas/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estilistas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nombre\": \"uñas\",\n    \"precio\": \"50000\",\n    \"duracion\": \"30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/servicios/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servicios",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Cita",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"fecha\": \"2024-01-01\",\n    \"cliente\": \"Lucia\",\n    \"estilista\": \"Juan\",\n    \"servicio\": \"uñas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/citas/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"citas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Citas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/citas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"citas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Estilistas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/estilistas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estilistas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Servicios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/servicios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Clientes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/clientes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Estilistas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/estilistas/eliminar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estilistas",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Servicios",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/servicios/eliminar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servicios",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Citas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/citas/eliminar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"citas",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
