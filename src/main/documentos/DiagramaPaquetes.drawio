@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" modified="2024-05-20T06:31:17.773Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="PxEkMle-VtWxaasl7n8H" version="24.4.4" type="device">
+  <diagram name="Página-1" id="OERE2ExId774n-SWrE_T">
+    <mxGraphModel dx="1468" dy="851" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nGa38wClKAFcmIm9lb7W-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xDRomEqA2AsYRfsG60Ce-1" target="xDRomEqA2AsYRfsG60Ce-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-1" value="CitaControlador&lt;div&gt;ClienteControlador&lt;/div&gt;&lt;div&gt;EstilistaControlador&lt;/div&gt;&lt;div&gt;ServicioControlador&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="60" y="280" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="nGa38wClKAFcmIm9lb7W-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xDRomEqA2AsYRfsG60Ce-2" target="xDRomEqA2AsYRfsG60Ce-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-2" value="Controlador" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="280" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-3" value="Cita&lt;div&gt;Cliente&lt;/div&gt;&lt;div&gt;Estilista&lt;/div&gt;&lt;div&gt;Servicio&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="180" y="65" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-4" value="Entidades" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="65" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-5" value="CitaRepository&lt;div&gt;ClienteRepository&lt;/div&gt;&lt;div&gt;EstilistaRepository&lt;/div&gt;&lt;div&gt;ServicioRepository&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="240" y="470" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="nGa38wClKAFcmIm9lb7W-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xDRomEqA2AsYRfsG60Ce-6" target="xDRomEqA2AsYRfsG60Ce-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-6" value="Repositorios" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="470" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-7" value="CitaService&lt;div&gt;ClienteService&lt;/div&gt;&lt;div&gt;EstilistaService&lt;/div&gt;&lt;div&gt;ServicioService&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="280" y="280" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-8" value="Services" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="280" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-9" value="CitaDTO&lt;div&gt;ClienteDTO&lt;/div&gt;&lt;div&gt;EstilistaDTO&lt;/div&gt;&lt;div&gt;ServicioDTO&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="60" y="470" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="nGa38wClKAFcmIm9lb7W-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xDRomEqA2AsYRfsG60Ce-10" target="xDRomEqA2AsYRfsG60Ce-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xDRomEqA2AsYRfsG60Ce-10" value="DTO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="470" width="140" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
