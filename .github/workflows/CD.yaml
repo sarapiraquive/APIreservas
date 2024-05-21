@@ -39,7 +39,7 @@ jobs:
       - name: Build y push imagen Docker
         run: |
           docker build -t sarapiraquive/adelantoscd:latest .
-          docker push yourusername/adelantoscd:latest 
+          docker push sarapiraquive/adelantoscd:latest 
 
 
 
