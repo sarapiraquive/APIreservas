@@ -1,4 +1,5 @@
-name: Continuos Delivery
+name: Continuous Delivery
+
 on:
   push:
     branches: ['main']
@@ -6,53 +7,40 @@ jobs:
   cd:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargando el Proyecto
+      - name: Descargar el proyecto
         uses: actions/checkout@v4
-        with:
-          fetch-depth: '0'
-      - name: Instalacion de Java
+      - name: Instalando java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
-      - name: Configurando Gradle
+          java-version: '17'
+      - name: Configurando gradle
         uses: gradle/gradle-build-action@v2
-      - name: Garantiza execute permission para el gradlew
-        run: chmod +x ./gradlew
-      - name: Compila el Proyecto build Proyect
-        run: ./gradlew build
-      - name: Log In al DockerHub
+      - name: Compilando el proyecto build project
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        run: |
+          docker buildx create --name mybuilder
+          docker buildx use mybuilder
+          docker buildx inspect --bootstrap
+
+      - name: Iniciar sesión en DockerHub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Calculate Next Semantic Version Tag
-        id: next_tag
-        run: |
-          GIT_TAG=$(git describe --tags --abbrev=0 --match "[0-9]*.[0-9]*.[0-9]*" `git rev-list --tags --max-count=1` 2>/dev/null) || echo "1.0.0"
-          
-          echo "Latest tag: $GIT_TAG"
-          
-          NEXT_TAG=$(echo $GIT_TAG | awk -F. -v OFS=. '{$NF++; print $1,$2,$3}')
-          if ! [[ $NEXT_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            NEXT_TAG="1.0.1"
-          fi
-          echo "Next tag: $NEXT_TAG"
-          echo "next_version=$NEXT_TAG" >> $GITHUB_ENV
-          echo "::set-output name=next_version::$NEXT_TAG"
-      - name: Docker metadata
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: sarapiraquive/adelantoscd
-          tags: |
-            type=raw,value=${{ steps.next_tag.outputs.next_version }}
 
-      - name: Construye y sube la imagen de docker
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: Dockerfile
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+      - name: Build y push imagen Docker
+        run: |
+          docker build -t sarapiraquive/adelantoscd:latest .
+          docker push yourusername/adelantoscd:latest 
+
+
+
+
