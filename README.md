@@ -46,7 +46,7 @@ Esta integración con el backend es fundamental para garantizar que la aplicaci�
 
 •	Para habilitar la cancelación de citas, se implementó una solicitud HTTP DELETE al backend. Cuando un usuario solicita cancelar una cita, se activa una función que envía esta solicitud, incluyendo el identificador único de la cita a cancelar. El servidor procesa esta solicitud, eliminando la cita correspondiente de la base de datos. Una vez confirmada la cancelación, la interfaz de usuario se actualiza automáticamente para reflejar el cambio, eliminando la cita cancelada de la lista mostrada al cliente.
 
-##5.	C4
+## 5.	C4
 
 **Model system context diagram**
 
