@@ -49,6 +49,5 @@ public class CitaControlador {
     public ResponseEntity<Void> eliminarCita(@PathVariable Long citaId) {
         citaService.eliminarCita(citaId);
         return ResponseEntity.noContent().build();
-
     }
 }
