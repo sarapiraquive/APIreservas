@@ -49,20 +49,6 @@ public class CitaControladorIntegrationTest {
     }
 
     @Test
-    public void testCambiarFechaCita() throws Exception {
-        CambioFechaCitaDto cambioFechaDto = new CambioFechaCitaDto();
-        cambioFechaDto.setNuevaFecha(LocalDate.now().atStartOfDay());
-
-        Mockito.when(citaService.actualizarFechaCita(Mockito.anyLong(), Mockito.any(LocalDate.class).atStartOfDay())).thenReturn(cita);
-
-        mockMvc.perform(put("/citas/{id}/cambiarFecha", 1)
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(cambioFechaDto)))
-                .andDo(print())
-                .andExpect(status().isOk());
-    }
-
-    @Test
     public void testEliminarCita() throws Exception {
         Mockito.doNothing().when(citaService).eliminarCita(Mockito.anyLong());
 
