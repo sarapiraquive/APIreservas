@@ -35,8 +35,9 @@ public class CitaControlador {
     @ApiOperation("Crear nueva cita")
     @PostMapping
     public ResponseEntity<Cita> crearCita(@RequestBody Cita cita) {
-        Cita citaCreada = citaService.crearCita(cita);
-        return new ResponseEntity<>(citaCreada, HttpStatus.CREATED);
+            Cita citaCreada = citaService.crearCita(cita);
+            return new ResponseEntity<>(citaCreada, HttpStatus.CREATED);
+
     }
 
     @PutMapping("/{id}/cambiarFecha")
